@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -18,8 +20,32 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: "Source Sans 3", sans-serif;
 }
+nav .logo {
+  font-family: "Bungee", sans-serif;
+}
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #f4f1ec;
 
+}
+main {
+  width: 90%;
+  margin: 0 auto; /*center main container horizontally within parent container */
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+main .tweet-btn-counter {
+  display: flex;
+  justify-content: space-between;
+  font: bold;
+  font-size: 25px;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

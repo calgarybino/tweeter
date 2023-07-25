@@ -1,0 +1,38 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #f5e8c8;
+  background-image: url(http://www.transparenttextures.com/patterns/dark-dot.png);
+  background-repeat: repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.name-container {
+  text-align: center;
+  margin-top: 10px;
+}
+.name-container h2 {
+  font-size: 24px;
+  color: #333333;
+}
+.name-container a {
+  text-decoration: none;
+  color: #4056a1;
+  font-weight: bold;
+}
+.name-container a:hover {
+  text-decoration: underline;
+}
