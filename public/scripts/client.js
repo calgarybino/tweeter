@@ -49,4 +49,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // You can add more JavaScript code here for other interactions and functionalities
+  
 });

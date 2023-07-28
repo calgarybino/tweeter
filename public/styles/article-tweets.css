@@ -24,7 +24,7 @@ article.tweet header {
 
 .handle {
   opacity: 0.4;
-  color: #4056A1;
+  color: #4056a1;
   font-weight: bolder;
 }
 
@@ -36,7 +36,7 @@ article.tweet header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #4056A1;
+  color: #4056a1;
   border-top: 4px solid #4d4b4b;
   font-size: 0.5em;
 }
@@ -44,7 +44,6 @@ article.tweet header {
 .tweet footer .icons {
   display: flex;
   gap: 10px;
-
 }
 
 .tweet:hover {
@@ -53,4 +52,9 @@ article.tweet header {
 
 .icons i:hover {
   color: orange;
+}
+.tweeter-img {
+  font;
+  display: flex;
+  align-items: center;
 }
