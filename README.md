@@ -6,7 +6,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-![Screenshot](/home/labber/tweeter/public/images/biniam.png)
+![Screenshot](./public/images/biniam.png)
 
 ### Getting Started
 
