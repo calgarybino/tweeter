@@ -13,6 +13,8 @@
 .nav-right {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .nav-right i {
   color: orange;
