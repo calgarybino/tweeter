@@ -1,52 +1,17 @@
-.nav {
-  height: 120px;
-  width: 100%;
-  background-color: #4056a1;
-  color: white;
-  padding: 0 1.5em;
-  padding-top: 40px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-right {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.nav-right i {
-  color: orange;
-  justify-content: center;
-  margin-left: 3em;
-  padding: 8px;
-  animation-duration: 2s;
-}
-.write-tweet-btn {
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-}
-.write-tweet-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.scroll-to-top-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: red;
-  color: #fff;
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-.scroll-to-top-btn i {
-  font-size: 30px;
+/* Error: Top-level selectors may not contain the parent selector "&".
+ *    ,
+ * 20 | &-right {
+ *    | ^^^^^^^
+ *    '
+ *   sass/nav.scss 20:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Top-level selectors may not contain the parent selector "&".\a    \2577 \a 20 \2502  &-right {\a    \2502  ^^^^^^^\a    \2575 \a   sass/nav.scss 20:1  root stylesheet';
 }
