@@ -50,6 +50,11 @@ main .tweet-btn-counter {
   font-size: 25px;
 }
 
+.wrapper {
+  margin-top: 120px;
+  width: 100%;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

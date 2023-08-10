@@ -65,35 +65,37 @@
         </span>
       </div>
     </nav>
-    <header id="header">
-      <div class="avatar-container">
-        <img src="/images/profile-hex.png" alt="Avatar" />
-      </div>
-      <div class="name-container">
-        <br />
-        <h2>Biniam Gebrai</h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main id="main-container" class="container">
-      <section class="new-tweet">
-        <div id="error-container"></div>
-        <form id="tweet-form" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="tweet-btn-counter">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <!---------------------- All tweets container----------------------->
-      <section id="tweets-container"></section>
-      <!-- Button to scroll to the top -->
-      <button class="scroll-to-top-btn">
-        <i class="fa-solid fa-angles-up"></i>
-      </button>
-    </main>
+    <div class="wrapper">
+      <header id="header">
+        <div class="avatar-container">
+          <img src="/images/profile-hex.png" alt="Avatar" />
+        </div>
+        <div class="name-container">
+          <br />
+          <h2>Biniam Gebrai</h2>
+        </div>
+      </header>
+      <main id="main-container" class="container">
+        <section class="new-tweet">
+          <div id="error-container"></div>
+          <form id="tweet-form" method="POST">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="tweet-btn-counter">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
+        <!---------------------- All tweets container----------------------->
+        <section id="tweets-container"></section>
+        <!-- Button to scroll to the top -->
+        <button class="scroll-to-top-btn">
+          <i class="fa-solid fa-angles-up"></i>
+        </button>
+      </main>
+    </div>
   </body>
 </html>
