@@ -1,33 +1,46 @@
 $(document).ready(function () {
-  const MAX_CHARACTER_LIMIT = 140; // Maximum character limit for the tweet
+  // Event handler for the textarea element
+  $("#tweet-text").on("input", function () {
+    // Get the character count
+    const charCount = $(this).val().length;
 
-  // Get references to necessary DOM elements
-  const tweetText = $("#tweet-text");
-  const counter = $(".counter");
+    // Update the character counter display
+    const counter = $(".counter");
+    counter.text(140 - charCount);
 
-  // Function to update the character count and display it
-  function updateCharacterCount() {
-    const remainingChars = MAX_CHARACTER_LIMIT - tweetText.val().length;
-
-    // Prevent the character count from going below zero
-    const displayCount = Math.max(0, remainingChars);
-    counter.text(remainingChars);
-    counter.text(displayCount);
-    // Add or remove a class for the counter text color based on the remaining characters
-    if (remainingChars < 0) {
-      counter.addClass("exceeded-limit");
-      // Disable the textarea when the character limit is exceeded
-      tweetText.prop("disabled", true);
+    // Change the counter color based on character count
+    if (charCount > 140) {
+      counter.addClass("over-limit");
     } else {
-      counter.removeClass("exceeded-limit");
-      // Enable the textarea when the character limit is not exceeded
-      tweetText.prop("disabled", false);
+      counter.removeClass("over-limit");
     }
-  }
+  });
 
-  // Event listener for the tweet text area input
-  tweetText.on("input", updateCharacterCount);
+  console.log("composer-char-counter.js loaded successfully!");
 
-  // Initial update of the character count on page load
-  updateCharacterCount();
+  // Scroll to top button
+  $(window).scroll(function () {
+    // Show/hide the scroll-to-top button based on the scroll position
+    if ($(this).scrollTop() > 100) {
+      $(".scroll-to-top-btn").fadeIn();
+      $(".write-tweet-btn").fadeOut();
+    } else {
+      $(".scroll-to-top-btn").fadeOut();
+      $(".write-tweet-btn").fadeIn();
+    }
+  });
+
+  // Event listener for scroll-to-top button click
+  $(".scroll-to-top-btn").click(function () {
+    // Scroll to the top of the page
+    $("html, body").animate({ scrollTop: 0 }, "slow", function () {
+      // After scrolling to the top, toggle the visibility of the new-tweet section
+      $(".new-tweet").slideToggle("slow", function () {
+        // After the animation is complete, focus on the textarea if the form is visible
+        if ($(this).is(":visible")) {
+          $("#tweet-text").focus(); // Automatically enable the textarea for typing
+        }
+      });
+    });
+  });
 });

@@ -1,14 +1,7 @@
-$navbar-bg-color: #4056a1;
-@mixin align-vertically {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .nav {
   height: 120px;
   width: 100%;
-  background-color: $navbar-bg-color;
+  background-color: #4056a1;
   color: white;
   padding: 0 1.5em;
   padding-top: 40px;
@@ -17,28 +10,38 @@ $navbar-bg-color: #4056a1;
   justify-content: space-between;
   align-items: center;
 }
-&-right {
-  @include align-vertically;
+.nav :right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-i {
+
+.nav i {
   color: orange;
   justify-content: center;
   margin-left: 3em;
   padding: 8px;
   animation-duration: 2s;
 }
-&-tweet-btn {
+.nav .tweet-btn {
   cursor: pointer;
-  @include align-vertically;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 8px;
   border-radius: 20px;
   transition: background-color 0.3s ease;
 }
-& :hover {
+.nav :hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-&-scroll-to-top-btn {
-  @include align-vertically;
+.nav .scroll-to-top-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -51,6 +54,6 @@ i {
   cursor: pointer;
   display: none;
 }
-i {
+.nav i {
   font-size: 30px;
 }
